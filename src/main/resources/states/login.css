@@ -1,0 +1,156 @@
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-modal.hidden {
+    display: none;
+}
+
+.login-modal-content {
+    background: white;
+    width: 350px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Tabs format */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.tab-link.active {
+    color: #28a745;
+    border-bottom: 2px solid #28a745;
+}
+
+/* Forms format */
+.forms {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+}
+
+.form.active {
+    display: flex;
+}
+
+input {
+    display: block;
+    margin-top: 5px;
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+}
+
+.forgot-password {
+    margin-top: 7px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+.helper-text {
+    font-size: 0.7rem;
+    color: #6c757d;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+}
+
+.checkbox-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    color: #6c757d;
+}
+
+.checkbox-container input {
+    accent-color: #28a745;
+    transform: scale(1);
+    margin-right: 10px;
+    flex-shrink: 0;
+    width: auto;
+}
+
+.btn-signin {
+    background-color: #28a745;
+    margin-top: 30px;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-signin:hover {
+    background-color: #218838;
+}
+
+.btn-signup {
+    background-color: #28a745;
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.btn-signup:hover {
+    background-color: #218838;
+}

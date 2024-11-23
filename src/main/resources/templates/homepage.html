@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCoLive</title>
+    <link rel="stylesheet" href="../states/homepage.css">
+    <link rel="stylesheet" href="../states/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<header>
+    <nav class="left">
+        <a href="#">Apartment</a>
+        <a href="#">House</a>
+        <a href="../templates/map.html">Map</a>
+        <a href="#">More</a>
+    </nav>
+    <div class="logo">
+        <i class='bx bx-building-house' style="color: #28a745; font-size: 2rem;"></i> CampusCoLive
+    </div>
+    <nav class="right">
+        <a href="#">Help</a>
+        <i class='bx bx-user-circle' id="user-icon" style="font-size: 2rem; cursor: pointer;"></i>
+    </nav>
+</header>
+
+<div class="search-section">
+    <div class="search-container">
+        <input id="search-input" type="text" placeholder="Enter an address, neighborhood, city, or ZIP code">
+        <button id="search-btn"><i class='bx bx-search' style="font-size: 1.5rem;"></i></button>
+    </div>
+</div>
+
+<div id="property-list" class="property-list"></div>
+
+<!-- login/new account -->
+<div id="login-modal" class="login-modal hidden">
+    <div class="login-modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2>CampusCoLive</h2>
+        <div class="tabs">
+            <button class="tab-link active" data-target="signin-form">Sign in</button>
+            <button class="tab-link" data-target="signup-form">New account</button>
+        </div>
+        <div class="forms">
+            <!-- login form -->
+            <form id="signin-form" class="form active">
+                <div class="input-group">
+                    <label class="input-label" for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn-signin">Sign in</button>
+                <a href="#" class="forgot-password" style="font-size: 0.8rem;">Forgot your password?</a>
+            </form>
+            <!-- new account form -->
+            <form id="signup-form" class="form">
+                <div class="input-group">
+                    <label class="input-label" for="firstname">First Name</label>
+                    <input type="email" id="firstname" placeholder="Enter First Name" required>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" for="lastname">Last Name</label>
+                    <input type="email" id="lastname" placeholder="Enter Last Name" required>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" for="newemail">Email</label>
+                    <input type="email" id="newemail" placeholder="Enter Email" required>
+                </div>
+                <div class="input-group">
+                    <label class="input-label" for="createpassword">Password</label>
+                    <small class="helper-text">Use uppercase, lowercase and numbers for a stronger password.</small>
+                    <input type="password" id="createpassword" placeholder="Create Password" required>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox">I agree the CampusCoLive’s <a href="#"> Terms & Conditions</a>
+                </div>
+                <button type="submit" class="btn-signup">Create Account</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../states/homepage.js"></script>
+<script src="../states/login.js"></script>
+</body>
+</html>
