@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header .back-button {
+    color: rgb(128, 128, 128);
+    font-size: 2.8rem;
+    cursor: pointer;
+}
+
+.search-container {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #28a745;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.search-container button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+
+.left-section {
+    width: 40%;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.right-section {
+    width: 60%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.styled-btn {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 15px 20px;
+    width: 48%;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.styled-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.roommate-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.roommate-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.roommate-photo {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.roommate-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.roommate-card p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.roommate-card .gender {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.roommate-card button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

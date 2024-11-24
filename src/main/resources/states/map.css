@@ -13,6 +13,26 @@ header {
     color: white;
     text-align: center;
     padding: 20px 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    text-decoration: underline;
 }
 
 .container {
