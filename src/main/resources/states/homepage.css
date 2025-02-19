@@ -141,7 +141,7 @@ footer {
 #darkModeToggle {
     position: absolute;
     top: 10px;
-    right: 50px;
+    right: 30px;
     align-items: end;
     padding: 10px 20px;
     background-color: gray;
@@ -166,18 +166,18 @@ body.dark-mode .logo {
     color: white;
 }
 
-body.dark-mode header nav a{
+body.dark-mode header nav a, body.dark-mode .search-container button, body.dark-mode .property-card .details p{
     color: white;
 }
 
 body.dark-mode header, body.dark-mode footer {
-    background-color: #222222;
+    background-color: black;
     color: white;
     border: 1px solid #222222;
 }
 
-body.dark-mode .search-container {
-    background-color: black;
+body.dark-mode .search-container, body.dark-mode .search-container input{
+    background-color: #222222;
     color: white;
 }
 

@@ -159,15 +159,12 @@ input {
     content: attr(data-mode);
 }
 
-body.dark-mode {
-    background-color: black;
-    color: white;
+body.dark-mode .login-modal-content{
+    background: #111111;
 }
 
-body.dark-mode header, body.dark-mode footer {
-    background-color: black;
+body.dark-mode .tab-link, body.dark-mode .forgot-password, body.dark-mode .input-label {
     color: white;
-    border: 1px solid black;
 }
 
 body.dark-mode #darkModeToggle::after {

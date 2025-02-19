@@ -70,6 +70,7 @@ const darkModeStyle = [
     { featureType: "administrative", elementType: "geometry", stylers:[{ color:"#757575" }]},
     { featureType: "road", stylers: [{ color: "#383838" }] },
     { featureType: "road", elementType: "labels", stylers: [{ color: "#808080" }]},
+    { featureType: "road", elementType: "labels.text.stroke", stylers: [{ color: "#000000" }]},
     { featureType: "water", stylers: [{ color: "#000000" }] },
     { featureType: "poi", stylers: [{ visibility: "off"}] },
 ];
