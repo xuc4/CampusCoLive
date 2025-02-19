@@ -2,37 +2,42 @@
 const properties = [
     {
         id: 1,
-        price: "$500,000",
-        details: "3 Beds • 2 Baths • 1,500 sqft",
-        address: "1234 Elm St, Springfield, IL",
+		name: "The Clarington",
+        price: "$1000/m",
+        details: "1 Bed • 1 Bath • 1,500 sqft",
+        address: "2617 Short Vine St, Cincinnati, OH",
         image: "../states/images/id1.jpg",
     },
     {
         id: 2,
-        price: "$750,000",
-        details: "4 Beds • 3 Baths • 2,000 sqft",
-        address: "5678 Oak St, Chicago, IL",
+		name: "The Verge",
+        price: "$1500/m",
+        details: "2 Beds • 3 Baths • 2,000 sqft",
+        address: "165 W McMillan St, Cincinnati, OH",
         image: "../states/images/id2.png",
     },
     {
         id: 3,
-        price: "$250,000",
-        details: "4 Beds • 2 Baths • 3,000 sqft",
-        address: "9102 Pine St, Los Angeles, CA",
+		name: "Yugo Cincinnati Deacon",
+        price: "$1600/m",
+        details: "3 Beds • 3 Baths • 3,000 sqft",
+        address: "424 Straight St, Cincinnati, OH",
         image: "../states/images/id3.png",
     },
     {
         id: 4,
-        price: "$60,000",
-        details: "3 Beds • 2 Baths • 5,000 sqft",
-        address: "5678 Oak St, Chicago, IL",
+		name: "Tower One",
+        price: "$2250/m",
+        details: "4 Beds • 4 Baths • 5,000 sqft",
+        address: "2515 Burnet Ave, Cincinnati, OH",
         image: "../states/images/id4.png",
     },
     {
         id: 5,
-        price: "$68,000",
-        details: "5 Beds • 4 Baths • 8,000 sqft",
-        address: "4516 Oak St, Chicago, IL",
+		name: "Auburndale",
+        price: "$950/m",
+        details: "1 Beds • 1 Baths • 550 sqft",
+        address: "2508 Auburn Ave, Cincinnati, OH",
         image: "../states/images/id4.png",
     },
 ];
@@ -53,8 +58,9 @@ function renderProperties(filter = "") {
         card.innerHTML = `
       <img src="${property.image}" alt="Property Image">
       <div class="details">
-        <h3>${property.price}</h3>
-        <p>${property.details}</p>
+        <h3>${property.name}</h3>
+        <p>${property.price}</p>
+		<p>${property.details}</p>
         <p>${property.address}</p>
         <a href="details.html?id=${property.id}">View Details</a>
       </div>

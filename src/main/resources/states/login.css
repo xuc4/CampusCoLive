@@ -154,3 +154,22 @@ input {
 .btn-signup:hover {
     background-color: #218838;
 }
+
+#darkModeToggle::after {
+    content: attr(data-mode);
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+body.dark-mode #darkModeToggle::after {
+    content: "Light Mode";
+}

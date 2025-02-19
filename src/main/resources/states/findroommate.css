@@ -167,3 +167,59 @@ header .back-button {
 .hidden {
     display: none;
 }
+
+#darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    align-items: end;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#darkModeToggle::after {
+    content: attr(data-mode);
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+body.dark-mode #darkModeToggle::after {
+    content: "Light Mode";
+}
+
+body.dark-mode #map {
+    background-color: #222222;
+    border: 1px solid black;
+}
+
+body.dark-mode .left-section {
+    background-color: #222222;
+}
+
+body.dark-mode .styled-btn {
+    background: #333333;
+    color: white;
+}
+
+body.dark-mode .roommate-card {
+    background: #333333;
+    color: white;
+}
+
+body.dark-mode .back-button {
+    color: white;
+}
