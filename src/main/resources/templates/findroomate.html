@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="../states/findroommate.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFpe5XDw6XfsE-SoYitkt0u_EoZiV2Rg&callback=initMap" async defer></script>
+    <script src="../states/dark-mode.js" ></script>
 </head>
 <body>
 <header>
     <div class="back-button">
-        <a href="homepage.html"><i class='bx bx-chevron-left'></i></a>
+        <a href="../templates/homepage.html" class="back-button"><i class='bx bx-chevron-left'></i></a>
     </div>
     <div class="search-container">
         <input id="search-input" type="text" placeholder="University of Cincinnati">
         <button id="search-btn"><i class='bx bx-search'></i></button>
     </div>
+    <button id="darkModeToggle" data-mode="Dark Mode"></button>
 </header>
 
 <div class="main-container">

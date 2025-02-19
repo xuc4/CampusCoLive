@@ -3,110 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>University Housing</title>
+    <title>CampusCoLive Map</title>
     <link rel="stylesheet" href="../states/map.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Google Maps API Script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPFpe5XDw6XfsE-SoYitkt0u_EoZiV2Rg&callback=initMap" async defer></script>
-
-    <script>
-        var apartments = [
-            { name: "Apartment 1", distance: 0.5, price: 1600, lat: 39.133, lng: -84.510, bedrooms: 3 },
-            { name: "Apartment 2", distance: 1.0, price: 1500, lat: 39.134, lng: -84.511, bedrooms: 2 },
-            { name: "Apartment 3", distance: 1.5, price: 2250, lat: 39.135, lng: -84.512, bedrooms: 4 },
-            { name: "Apartment 4", distance: 2.0, price: 1000, lat: 39.136, lng: -84.513, bedrooms: 1 }
-        ];
-
-        var markers = [];
-        var map;
-
-        function initMap() {
-            var ucLocation = { lat: 39.131, lng: -84.515 };
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: ucLocation,
-                zoom: 16
-            });
-
-            apartments.forEach(function(apartment) {
-                var marker = new google.maps.Marker({
-                    position: { lat: apartment.lat, lng: apartment.lng },
-                    map: map,
-                    title: apartment.name
-                });
-
-                var infoWindow = new google.maps.InfoWindow({
-                    content: `<h3>${apartment.name}</h3><p>Price: $${apartment.price}<br>Distance: ${apartment.distance} miles<br>Bedrooms: ${apartment.bedrooms}</p>`
-                });
-
-                marker.addListener('click', function() {
-                    infoWindow.open(map, marker);
-                });
-
-                markers.push(marker);
-            });
-        }
-
-        function filterApartments() {
-            var maxDistance = document.getElementById('distanceFilter').value;
-            var maxPrice = document.getElementById('priceFilter').value;
-            var selectedBedrooms = document.getElementById('bedroomFilter').value;
-
-            var filteredApartments = apartments.filter(function(apartment) {
-                var matchesDistance = apartment.distance <= maxDistance;
-                var matchesPrice = apartment.price <= maxPrice;
-                var matchesBedrooms = selectedBedrooms === 'any' || apartment.bedrooms == selectedBedrooms;
-
-                return matchesDistance && matchesPrice && matchesBedrooms;
-            });
-
-            displayApartments(filteredApartments);
-
-            markers.forEach(function(marker) {
-                marker.setMap(null);
-            });
-            markers = [];
-
-            filteredApartments.forEach(function(apartment) {
-                var marker = new google.maps.Marker({
-                    position: { lat: apartment.lat, lng: apartment.lng },
-                    map: map,
-                    title: apartment.name
-                });
-
-                markers.push(marker);
-
-                var infoWindow = new google.maps.InfoWindow({
-                    content: `<h3>${apartment.name}</h3><p>Price: $${apartment.price}<br>Distance: ${apartment.distance} miles<br>Bedrooms: ${apartment.bedrooms}</p>`
-                });
-
-                marker.addListener('click', function() {
-                    infoWindow.open(map, marker);
-                });
-            });
-        }
-
-        function displayApartments(apartmentsToDisplay) {
-            var apartmentList = document.getElementById('apartmentList');
-            apartmentList.innerHTML = '';
-
-            apartmentsToDisplay.forEach(function(apartment) {
-                var listItem = document.createElement('li');
-                listItem.textContent = apartment.name + ' - ' + apartment.distance + ' miles - $' + apartment.price + ' - ' + apartment.bedrooms + ' bedrooms';
-                apartmentList.appendChild(listItem);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            displayApartments(apartments);  // Display all apartments initially
-        });
-    </script>
+    <script src="../states/map.js" defer></script>
 </head>
 <body>
 <header>
     <div class="header-container">
         <a href="../templates/homepage.html" class="back-button"><i class='bx bx-chevron-left'></i></a>
-        <h1>University of Cincinnati Housing</h1>
+        <div class="logo">
+        <i class='bx bx-building-house' style="color: #28a745; font-size: 2rem;"></i>CampusCoLive Map
+		</div>
+        <button id="darkModeToggle" data-mode="Dark Mode"></button>
     </div>
 </header>
 
@@ -119,7 +31,7 @@
         <div class="filters">
             <label for="distanceFilter">Max Distance (miles):</label>
             <select id="distanceFilter" onchange="filterApartments()">
-                <option value="5">Any</option>
+                <option value="9999">Any</option>
                 <option value="0.5">0.5 Miles</option>
                 <option value="1">1 Miles</option>
                 <option value="2">2 Miles</option>
@@ -152,7 +64,7 @@
 </div>
 
 <footer>
-    <p>University of Cincinnati Housing © 2024</p>
+    <p>CampusCoLive © 2025</p>
 </footer>
 </body>
 </html>
