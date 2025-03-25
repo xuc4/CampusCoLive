@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Drizvato"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>CampusCoLive-Search</title>
+
+    <!-- Custom CSS -->
+    <link href="../states/styles.css" rel="stylesheet">
+
+    <!-- Custom Color Option -->
+    <link href="../states/colors.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../states/homepage.css">
+    <link rel="stylesheet" href="../states/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/adee3321e9.js" crossorigin="anonymous"></script>
+
+</head>
+
+<header>
+    <nav class="left">
+        <a href="#">Apartment</a>
+        <a href="#">House</a>
+        <a href="../templates/map.html">Map</a>
+        <a href="../templates/findroomate.html">Find Roommate</a>
+    </nav>
+    <div class="logo">
+        <i class='bx bx-building-house' style="color: #28a745; font-size: 2rem;"></i> CampusCoLive
+    </div>
+    <nav class="right">
+        <a href="#">Help</a>
+        <i class='bx bx-user-circle' id="user-icon" style="font-size: 2rem; cursor: pointer;"></i>
+    </nav>
+</header>
+
+<body class="yellow-skin">
+
+<div class="preloader"></div>
+
+<div id="main-wrapper">
+
+    <!-- ============================ All Property ================================== -->
+    <section class="gray-simple">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- property Sidebar -->
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="hidden-md-down">
+
+                        <div class="page-sidebar">
+
+                            <!-- Find New Property -->
+                            <div class="sidebar-widgets">
+                                <form action="search">
+
+                                    <div class="form-group">
+                                        <div class="input-with-icon">
+                                            <input name="key" id="key" type="text" class="form-control" placeholder="City">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="simple-input">
+                                            <select name="type" id="ptype" class="form-control">
+                                                <option></option>
+                                                <option value="">&nbsp;</option>
+                                                <option value="apartment">Apartment</option>
+                                                <option value="House">House</option>
+                                                <option value="Hotel">Hotel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="simple-input">
+                                            <select name="rentType" id="type" class="form-control">
+                                                <option></option>
+                                                <option value="">&nbsp;</option>
+                                                <option value="entire rental">Entire Rental</option>
+                                                <option value="shared rental">Shared Rental</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="simple-input">
+                                            <select name="bedrooms" id="bedrooms" class="form-control">
+                                                <option></option>
+                                                <option value="">&nbsp;</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="simple-input">
+                                            <select name="order" id="order" class="form-control">
+                                                <option></option>
+                                                <option value="最新发布">Newly Listed</option>
+                                                <option value="价格升序">Price: Low to High</option>
+                                                <option value="价格降序">Price: High to Low</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 pt-4 pb-4">
+                                            <h6>Price Range</h6>
+                                            <div class="rg-slider">
+                                                <input id="monthPrice" type="text" class="js-range-slider"
+                                                       name="monthPriceRange"/>
+                                            </div>
+                                            <input style="display: none" id="priceRange" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="ameneties-features">
+                                        <button type="submit" class="btn btn-theme full-width bg-2">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Sidebar End -->
+
+                </div>
+
+                <div class="col-lg-8 col-md-12 col-sm-12">
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="single_property_style property_style_2 modern">
+
+                                <div class="listing_thumb_wrapper">
+                                    <div class="property_gallery_slide-thumb">
+                                        <a href="roomdetails.html"><img src="../states/images/searchroom1.png"></a>
+                                    </div>
+                                </div>
+
+                                <div class="property_caption_wrappers pb-0">
+                                    <div class="property_short_detail">
+                                        <div class="pr_type_status">
+                                            <h4 class="pr-property_title mb-1"><a></a></h4>
+                                            <div class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 20px" class="listing-location-name"></div>
+                                        </div>
+                                        <span style="font-size: 16px">Hub Apartment Cincinnati</span>
+                                        <div class="property-real-price"><a href="roomdetails.html" class="cl-blue">1400<span class="price_status">/ Month</span></a></div>
+                                    </div>
+                                </div>
+
+                                <div class="modern_property_footer">
+                                    <div class="property-lists flex-1">
+                                        <ul>
+                                            <li><span class="flatcons"><img src="../states/images/bed.svg" alt=""></span>Bedroom: 2
+                                            </li>
+                                            <li><span class="flatcons"><img src="../states/images/bath.svg" alt=""></span>Bathroom: 2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fp_types bg-success color--white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="single_property_style property_style_2 modern">
+
+                                <div class="listing_thumb_wrapper">
+                                    <div class="property_gallery_slide-thumb">
+                                        <a href="roomdetails.html"><img src="../states/images/searchroom2.png"></a>
+                                    </div>
+                                </div>
+
+                                <div class="property_caption_wrappers pb-0">
+                                    <div class="property_short_detail">
+                                        <div class="pr_type_status">
+                                            <h4 class="pr-property_title mb-1"><a></a></h4>
+                                            <div class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 20px" class="listing-location-name"></div>
+                                        </div>
+                                        <span style="font-size: 16px">Hub Apartment Cincinnati</span>
+                                        <div class="property-real-price"><a href="roomdetails.html" class="cl-blue">1700<span class="price_status">/ Month</span></a></div>
+                                    </div>
+                                </div>
+
+                                <div class="modern_property_footer">
+                                    <div class="property-lists flex-1">
+                                        <ul>
+                                            <li><span class="flatcons"><img src="../states/images/bed.svg" alt=""></span>Bedroom: 3
+                                            </li>
+                                            <li><span class="flatcons"><img src="../states/images/bath.svg" alt=""></span>Bathroom: 2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fp_types bg-success color--white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="single_property_style property_style_2 modern">
+
+                                <div class="listing_thumb_wrapper">
+                                    <div class="property_gallery_slide-thumb">
+                                        <a href="roomdetails.html"><img src="../states/images/searchroom3.png"></a>
+                                    </div>
+                                </div>
+
+                                <div class="property_caption_wrappers pb-0">
+                                    <div class="property_short_detail">
+                                        <div class="pr_type_status">
+                                            <h4 class="pr-property_title mb-1"><a></a></h4>
+                                            <div class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 20px" class="listing-location-name"></div>
+                                        </div>
+                                        <span style="font-size: 16px">Hub Apartment Cincinnati</span>
+                                        <div class="property-real-price"><a href="roomdetails.html" class="cl-blue">2100<span class="price_status">/ Month</span></a></div>
+                                    </div>
+                                </div>
+
+                                <div class="modern_property_footer">
+                                    <div class="property-lists flex-1">
+                                        <ul>
+                                            <li><span class="flatcons"><img src="../states/images/bed.svg" alt=""></span>Bedroom: 4
+                                            </li>
+                                            <li><span class="flatcons"><img src="../states/images/bath.svg" alt=""></span>Bathroom: 4
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fp_types bg-success color--white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="single_property_style property_style_2 modern">
+
+                                <div class="listing_thumb_wrapper">
+                                    <div class="property_gallery_slide-thumb">
+                                        <a href="roomdetails.html"><img src="../states/images/searchroom4.png"></a>
+                                    </div>
+                                </div>
+
+                                <div class="property_caption_wrappers pb-0">
+                                    <div class="property_short_detail">
+                                        <div class="pr_type_status">
+                                            <h4 class="pr-property_title mb-1"><a></a></h4>
+                                            <div class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 20px" class="listing-location-name"></div>
+                                        </div>
+                                        <span style="font-size: 16px">Verge Apartment Cincinnati</span>
+                                        <div class="property-real-price"><a href="roomdetails.html" class="cl-blue">1100<span class="price_status">/ Month</span></a></div>
+                                    </div>
+                                </div>
+
+                                <div class="modern_property_footer">
+                                    <div class="property-lists flex-1">
+                                        <ul>
+                                            <li><span class="flatcons"><img src="../states/images/bed.svg" alt=""></span>Bedroom: 1
+                                            </li>
+                                            <li><span class="flatcons"><img src="../states/images/bath.svg" alt=""></span>Bathroom: 1
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fp_types bg-success color--white"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="single_property_style property_style_2 modern">
+
+                                <div class="listing_thumb_wrapper">
+                                    <div class="property_gallery_slide-thumb">
+                                        <a href="roomdetails.html"><img src="../states/images/searchroom5.png"></a>
+                                    </div>
+                                </div>
+
+                                <div class="property_caption_wrappers pb-0">
+                                    <div class="property_short_detail">
+                                        <div class="pr_type_status">
+                                            <h4 class="pr-property_title mb-1"><a></a></h4>
+                                            <div class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 5px" class="listing-location-name"></div>
+                                            <div style="margin-top: 20px" class="listing-location-name"></div>
+                                        </div>
+                                        <span style="font-size: 16px">Verge Apartment Cincinnati</span>
+                                        <div class="property-real-price"><a href="roomdetails.html" class="cl-blue">1800<span class="price_status">/ Month</span></a></div>
+                                    </div>
+                                </div>
+
+                                <div class="modern_property_footer">
+                                    <div class="property-lists flex-1">
+                                        <ul>
+                                            <li><span class="flatcons"><img src="../states/images/bed.svg" alt=""></span>Bedroom: 2
+                                            </li>
+                                            <li><span class="flatcons"><img src="../states/images/bath.svg" alt=""></span>Bathroom: 2
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="fp_types bg-success color--white"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================ All Property ================================== -->
+
+
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+
+</div>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="../states/js/jquery.min.js"></script>
+<script src="../states/js/popper.min.js"></script>
+<script src="../states/js/bootstrap.min.js"></script>
+<script src="../states/js/ion.rangeSlider.min.js"></script>
+<script src="../states/js/select2.min.js"></script>
+<script src="../states/js/jquery.magnific-popup.min.js"></script>
+<script src="../states/js/slick.js"></script>
+<script src="../states/js/slider-bg.js"></script>
+<script src="../states/js/lightbox.js"></script>
+<script src="../states/js/imagesloaded.js"></script>
+<script src="../states/js/daterangepicker.js"></script>
+<script src="../states/js/custom.js"></script>
+
+<!-- ============================================================== -->
+<!-- This page plugins -->
+<!-- ============================================================== -->
+<script src="../states/common/reg.js"></script>
+<script src="../states/common/layer.js"></script>
+<script src="../states/common/custom.js"></script>
+<script>
+    window.onload = function () {
+        priceRange = $('#priceRange').val();
+        if (priceRange != null) {
+			let a = priceRange.split(';');
+			var slider = $(".js-range-slider").data("ionRangeSlider");
+			slider.update({
+				from: a[0],
+				to: a[1]
+			});
+			slider.reset();
+		}
+    }
+</script>
+</body>
+</html>

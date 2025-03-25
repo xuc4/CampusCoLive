@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Drizvato"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/adee3321e9.js" crossorigin="anonymous"></script>
+
+    <title>CampusCoLive-Review</title>
+
+    <!-- Custom CSS -->
+    <link href="../states/styles.css" rel="stylesheet">
+
+    <!-- Custom Color Option -->
+    <link href="../states/colors.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../states/homepage.css">
+    <link rel="stylesheet" href="../states/login.css">
+</head>
+
+<header>
+    <nav class="left">
+        <a href="search.html">Apartment</a>
+        <a href="search.html">House</a>
+        <a href="../templates/map.html">Map</a>
+        <a href="../templates/findroomate.html">Find Roommate</a>
+    </nav>
+    <div class="logo">
+        <i class='bx bx-building-house' style="color: #28a745; font-size: 2rem;"></i> CampusCoLive
+    </div>
+    <nav class="right">
+        <a href="#">Help</a>
+        <i class='bx bx-user-circle' id="user-icon" style="font-size: 2rem; cursor: pointer;"></i>
+    </nav>
+</header>
+
+<body class="yellow-skin">
+
+<div class="preloader"></div>
+
+
+<div id="main-wrapper">
+
+    <div class="clearfix"></div>
+
+    <!-- ============================ User Dashboard ================================== -->
+    <section class="gray p-0">
+        <div class="container-fluid p-0">
+
+            <div class="row">
+
+                <div style="margin-left: 150px; margin-right: 150px; width: 2400px;">
+                    <div class="dashboard-body">
+
+                        <div class="dashboard-wraper" style="min-height: 10px">
+
+                            <!-- Bookmark Property -->
+
+                            <table class="property-table-wrap responsive-table bkmark">
+                                <tbody>
+                                <tr>
+                                    <th style="font-weight: bold;">Room Details Review</th>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-toggle="collapse" data-parent="#features" href="#clOne"
+                                       aria-expanded="true"><h4 class="property_block_title">Room Details</h4></a>
+                                </div>
+                                <div id="clOne" class="panel-collapse collapse show" aria-expanded="true">
+                                    <div class="block-body">
+                                        <ul class="deatil_features">
+                                            <li><strong>Bedroom：</strong>2</li>
+                                            <li><strong>Living Room：</strong>1</li>
+                                            <li><strong>Bathroom： </strong>2</li>
+                                            <li><strong>Kitchen：</strong>Yes</li>
+                                            <li><strong>Garage：</strong>Yes</li>
+                                            <li><strong>Gym：</strong>Yes</li>
+                                            <li><strong>Capacity：</strong>700 SF</li>
+                                            <li><strong>Type：</strong>Apartment</li>
+                                            <li><strong>Elevator：</strong>Yes</li>
+                                            <li><strong>Free Wifi：</strong>Yes</li>
+                                        </ul>
+                                        <hr>
+                                        <a data-toggle="collapse" data-parent="#features" href="#clOne"
+                                           aria-expanded="true"><h6 class="property_block_title">Landlord Details</h6></a>
+                                        <ul class="deatil_features">
+                                            <li><strong>Name：</strong>Tom</li>
+                                            <li><strong>Phone：</strong>(513)123-4567</li>
+                                            <li><strong>Email：</strong>Tom@gmail.com</li>
+                                        </ul>
+                                        <hr>
+                                        <a data-toggle="collapse" data-parent="#features" href="#clOne"
+                                           aria-expanded="true"><h6 class="property_block_title">Tenant Details</h6></a>
+                                        <ul class="deatil_features">
+                                            <li><strong>Name：</strong>Jerry</li>
+                                            <li><strong>Phone：</strong>(513)678-9101</li>
+                                            <li><strong>Email：</strong>Jerry@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="dashboard-wraper" style="min-height: 10px; margin-top: 40px">
+                            <table class="property-table-wrap responsive-table bkmark">
+                                <tbody>
+                                <tr>
+                                    <th style="font-weight: bold;">Booking Details</th>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-toggle="collapse" data-parent="#floor" href="#clFive1" aria-expanded="true"
+                                       class="collapsed"><h4 class="property_block_title">Order Information</h4></a>
+                                </div>
+
+                                <div id="clFive1" class="panel-collapse collapse show" aria-expanded="true">
+                                    <div class="block-body">
+                                        <ul class="deatil_features">
+                                            <li><strong>BookingID：</strong>202503041234567</li>
+                                            <li><strong>Lease Term：</strong>12-month</li>
+                                            <li><strong>Rental Fee：</strong>1400/month</li>
+                                            <li><strong>Booking Creation Time：</strong>2025-03-04 14:30</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="dashboard-wraper" style="min-height: 10px; margin-top: 40px">
+                            <table class="property-table-wrap responsive-table bkmark">
+                                <tbody>
+                                <tr>
+                                    <th style="font-weight: bold;">Payment Method</th>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-toggle="collapse" data-parent="#comment" href="#clTen" aria-expanded="true">
+                                        <h4 class="property_block_title">Card Information</h4></a>
+                                </div>
+
+                                <div id="clTen" class="panel-collapse collapse show" aria-expanded="true">
+                                    <div class="block-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="Credit card number*" required style="width: 1080px">
+                                            </div>
+
+                                            <div class="form-group" style="display: flex; gap: 10px;">
+                                                <select name="expMonth" class="form-control" required style="width: 400px">
+                                                        <option value="">Month</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+
+                                                <select name="expYear" class="form-control" required style="width: 400px">
+                                                        <option value="">Year</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2025">2025</option>
+                                                    </select>
+
+                                                <div style="position: relative; flex-grow: 1;">
+                                                        <input type="text" name="cvv" class="form-control" placeholder="CVV" required style="width: 260px">
+                                                        <span style="position: absolute; right: 25px; top: 50%; transform: translateY(-50%); color: #bbb; cursor: pointer;"><i class="fa fa-question-circle"></i></span>
+                                                    </div>
+                                            </div>
+                                        </form>
+                                        <hr>
+                                        <a data-toggle="collapse" data-parent="#features" href="#clOne"
+                                           aria-expanded="true"><h6 class="property_block_title">Billing Address</h6></a>
+                                        <form>
+                                            <div class="form-group" style="display: flex; gap: 10px;">
+                                                <input type="text" name="first-name" class="form-control" placeholder="First Name*" required style="width: 535px">
+                                                <input type="text" name="last-name" class="form-control" placeholder="Last Name*" required style="width: 535px">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="address-line-1" class="form-control" placeholder="Address Line 1*" required style="width: 1080px">
+                                            </div>
+                                            <div>
+                                                <input type="text" name="address-line-2" class="form-control" placeholder="Address Line 2 (Optional)" required style="width: 1080px">
+                                            </div>
+                                            <div class="form-group" style="display: flex; gap: 10px; margin-top: 12px">
+                                                <input type="text" name="zipcode" class="form-control" placeholder="Zipcode*" required style="width: 535px">
+                                                <select name="state" class="form-control" required style="width: 535px">
+                                                    <option value="">State*</option>
+                                                    <option value="AL">AL</option>
+                                                    <option value="AK">AK</option>
+                                                    <option value="AZ">AZ</option>
+                                                    <option value="AR">AR</option>
+                                                    <option value="CA">CA</option>
+                                                    <option value="CO">CO</option>
+                                                    <option value="CT">CT</option>
+                                                    <option value="DE">DE</option>
+                                                    <option value="FL">FL</option>
+                                                    <option value="GA">GA</option>
+                                                    <option value="HI">HI</option>
+                                                    <option value="ID">ID</option>
+                                                    <option value="IL">IL</option>
+                                                    <option value="IN">IN</option>
+                                                    <option value="IA">IA</option>
+                                                    <option value="KS">KS</option>
+                                                    <option value="KY">KY</option>
+                                                    <option value="LA">LA</option>
+                                                    <option value="ME">ME</option>
+                                                    <option value="MA">MA</option>
+                                                    <option value="MI">MI</option>
+                                                    <option value="MN">MN</option>
+                                                    <option value="MS">MS</option>
+                                                    <option value="MT">MT</option>
+                                                    <option value="MO">MO</option>
+                                                    <option value="NE">NE</option>
+                                                    <option value="NV">NV</option>
+                                                    <option value="NH">NH</option>
+                                                    <option value="NJ">NJ</option>
+                                                    <option value="NM">NM</option>
+                                                    <option value="NY">NY</option>
+                                                    <option value="NC">NC</option>
+                                                    <option value="ND">ND</option>
+                                                    <option value="OH">OH</option>
+                                                    <option value="OK">OK</option>
+                                                    <option value="OR">OR</option>
+                                                    <option value="RI">RI</option>
+                                                    <option value="SC">SC</option>
+                                                    <option value="SD">SD</option>
+                                                    <option value="TN">TN</option>
+                                                    <option value="TX">TX</option>
+                                                    <option value="VT">VT</option>
+                                                    <option value="VA">VA</option>
+                                                    <option value="WA">WA</option>
+                                                    <option value="WV">WV</option>
+                                                    <option value="WI">WI</option>
+                                                    <option value="WY">WY</option>
+                                                </select>
+                                            </div>
+                                            <div style="margin-top: 12px">
+                                                <input type="text" name="city" class="form-control" placeholder="City*" required style="width: 1080px">
+                                            </div>
+                                            <div style="margin-top: 12px">
+                                                <input type="text" name="phone-number" class="form-control" placeholder="Phone Number*" required style="width: 1080px">
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        <button style="background-color: #007bff; color: white; font-weight: bold; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-top: 35px; width: 1200px; height: 40px" onclick="window.location.href='paymentsuccess.html'">
+                            Place Order
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ============================ User Dashboard End ================================== -->
+
+    <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="fa-solid fa-angle-up"></i></a>
+
+</div>
+
+<script src="../states/js/jquery.min.js"></script>
+<script src="../states/js/popper.min.js"></script>
+<script src="../states/js/bootstrap.min.js"></script>
+<script src="../states/js/ion.rangeSlider.min.js"></script>
+<script src="../states/js/select2.min.js"></script>
+<script src="../states/js/jquery.magnific-popup.min.js"></script>
+<script src="../states/js/slick.js"></script>
+<script src="../states/js/slider-bg.js"></script>
+<script src="../states/js/lightbox.js"></script>
+<script src="../states/js/imagesloaded.js"></script>
+<script src="../states/js/daterangepicker.js"></script>
+<script src="../states/js/custom.js"></script>
+
+<script src="../states/common/reg.js"></script>
+<script src="../states/common/layer.js"></script>
+<script src="../states/common/custom.js"></script>
+
+</body>
+</html>
