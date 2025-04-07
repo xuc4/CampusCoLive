@@ -30,10 +30,18 @@ public class CampusCoLiveApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// createUser();
-		// showAllUsers();
-		// getUserByRole("Renter");
-		// findCountOfUsers();
+		/**
+	 	createUser();
+	 	showAllUsers();
+		getUserByRole("Seller");
+		findCountOfUsers();
+		updateRole("User Role");
+		getUserByRole("Seller");
+	 	**/
+		findCountOfUsers();
+
+		deleteUser("1");
+		findCountOfUsers();
 	}
 
 	 void createUser() {
@@ -74,7 +82,26 @@ public class CampusCoLiveApplication implements CommandLineRunner {
 		System.out.println("Number of documents in the collection = " + count);
 	}
 
+	public void updateRole(String role) {
+		String newRole = "Seller";
 
+		List<UserMongoDB> list = userRepo.findAll(role);
+
+		list.forEach(user -> {
+			user.setRole(newRole);
+				}
+		);
+
+		List<UserMongoDB> userRoleUpdated = userRepo.saveAll(list);
+
+		if(userRoleUpdated != null)
+			System.out.println("Successfully updated " + userRoleUpdated.size() + " user roles.");
+	}
+
+	public void deleteUser(String id) {
+		userRepo.deleteById(id);
+		System.out.println("Item with id " + id + " deleted...");
+	}
 
 	public String getUserDetails(UserMongoDB user) {
 		System.out.println(
