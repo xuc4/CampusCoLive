@@ -1,31 +1,33 @@
 package com.example.campuscolive.entity;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Document("user")
 public class UserMongoDB {
 
 	@Id
-	private String id;
+	private ObjectId id;
 
 	private String firstName;
 	private String middleInitial;
 	private String lastName;
 	private String password;
 	private String gender;
-	private LocalDateTime birthDate;
-	private long phone;
+	private LocalDate birthDate;
+	private String phone;
 	private String email;
 	private String aboutMe;
 	private String role;
 	private LocalDateTime createDate;
 	private LocalDateTime updateTime;
 
-	public UserMongoDB(String id, String firstName, String middleInitial, String lastName, String password,
-	String gender, LocalDateTime birthDate, long phone, String email, String aboutMe, String role,
+	public UserMongoDB(ObjectId id, String firstName, String middleInitial, String lastName, String password,
+					   String gender, LocalDate birthDate, String phone, String email, String aboutMe, String role,
 					   LocalDateTime createDate, LocalDateTime updateTime) {
 		super();
 		this.id = id;
