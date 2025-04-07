@@ -1,57 +1,150 @@
 package com.example.campuscolive.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-@TableName("user")
-public class User implements Serializable {
+@Document("user")
+public class User {
 
-    private static final long serialVersionUID = -49065885542709215L;
+	@Id
+	private String id;
 
-    //Primary Key ID
-    @TableId(type = IdType.AUTO)
-    private Integer id;
+	private String firstName;
+	private String middleInitial;
+	private String lastName;
+	private String password;
+	private String gender;
+	private LocalDate birthDate;
+	private String phone;
+	private String email;
+	private String aboutMe;
+	private String role;
+	private LocalDateTime createDate;
+	private LocalDateTime updateTime;
 
-    private String name;
+	public User(String id, String firstName, String middleInitial, String lastName, String password,
+				String gender, LocalDate birthDate, String phone, String email, String aboutMe, String role,
+				LocalDateTime createDate, LocalDateTime updateTime) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.middleInitial = middleInitial;
+		this.lastName = lastName;
+		this.password = password;
+		this.gender = gender;
+		this.birthDate = birthDate;
+		this.phone = phone;
+		this.email = email;
+		this.aboutMe = aboutMe;
+		this.role = role;
+		this.createDate = createDate;
+		this.updateTime = updateTime;
+	}
 
-    private String password;
+	public String getId() {
+		return id;
+	}
 
-    private String sex;
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    private String birth;
+	public String getFirstName() {
+		return firstName;
+	}
 
-    //ID number
-    // private String idcardNum;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    private String phone;
+	public String getMiddleInitial() {
+		return middleInitial;
+	}
 
-    private String email;
+	public void setMiddleInitial(String middleInitial) {
+		this.middleInitial = middleInitial;
+	}
 
-    private String location;
+	public String getLastName() {
+		return lastName;
+	}
 
-    private String about;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    private String role;
+	public String getPassword() {
+		return password;
+	}
 
-    //Creation Time
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date createTime;
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    //Modification Time
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date updateTime;
+	public String getGender() {
+		return gender;
+	}
 
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public LocalDate getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(LocalDate birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getAboutMe() {
+		return aboutMe;
+	}
+
+	public void setAboutMe(String aboutMe) {
+		this.aboutMe = aboutMe;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public LocalDateTime getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(LocalDateTime createDate) {
+		this.createDate = createDate;
+	}
+
+	public LocalDateTime getUpdateTime() {
+		return updateTime;
+	}
+
+	public void setUpdateTime(LocalDateTime updateTime) {
+		this.updateTime = updateTime;
+	}
 }

@@ -1,6 +1,6 @@
 package com.example.campuscolive.controller;
 
-import com.example.campuscolive.entity.UserMongoDB;
+import com.example.campuscolive.entity.User;
 import com.example.campuscolive.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
         UserService userService;
 
         @PostMapping("/save")
-        public ResponseEntity<UserMongoDB> saveUser(@RequestBody UserMongoDB user) {
+        public ResponseEntity<User> saveUser(@RequestBody User user) {
             user = userService.saveUser(user);
 
             return new ResponseEntity<>(user, HttpStatus.OK);

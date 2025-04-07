@@ -1,11 +1,9 @@
 package com.example.campuscolive;
 
 import com.example.campuscolive.entity.User;
-import com.example.campuscolive.entity.UserMongoDB;
 import com.example.campuscolive.repository.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -13,7 +11,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @SpringBootApplication
@@ -23,7 +20,7 @@ public class CampusCoLiveApplication {
 	@Autowired
 	UserRepository userRepo;
 
-	List<UserMongoDB> userList = new ArrayList<>();
+	List<User> userList = new ArrayList<>();
 	public static void main(String[] args) {
 		SpringApplication.run(CampusCoLiveApplication.class, args);
 	}
@@ -56,7 +53,7 @@ public class CampusCoLiveApplication {
 		String birthdayDateString = "1991-05-24";
 		LocalDate birthdayLocalDate = LocalDate.parse(birthdayDateString);
 
-		userRepo.save(new UserMongoDB(uniqueId.toString(), "Matthew", "R", "Caudill", "yeet", "body type 2", birthdayLocalDate,
+		userRepo.save(new User(uniqueId.toString(), "Matthew", "R", "Caudill", "yeet", "body type 2", birthdayLocalDate,
 				"5551234567", "caudilmr@mail.uc.edu", "hello its me ur brother", "Renter", timeStampForNow, timeStampForNow));
 
 		System.out.println("Data creation complete...");
@@ -70,7 +67,7 @@ public class CampusCoLiveApplication {
 
 	public void getUserByRole(String role) {
 			System.out.println("Getting users that have the role " + role);
-			List<UserMongoDB> list = userRepo.findAll(role);
+			List<User> list = userRepo.findAll(role);
 
 			list.forEach(user -> System.out.println("User Name: " + user.getFirstName() + " " + user.getLastName()));
 	}
@@ -83,14 +80,14 @@ public class CampusCoLiveApplication {
 	public void updateRole(String role) {
 		String newRole = "Seller";
 
-		List<UserMongoDB> list = userRepo.findAll(role);
+		List<User> list = userRepo.findAll(role);
 
 		list.forEach(user -> {
 			user.setRole(newRole);
 				}
 		);
 
-		List<UserMongoDB> userRoleUpdated = userRepo.saveAll(list);
+		List<User> userRoleUpdated = userRepo.saveAll(list);
 
 		if(userRoleUpdated != null)
 			System.out.println("Successfully updated " + userRoleUpdated.size() + " user roles.");
@@ -101,7 +98,7 @@ public class CampusCoLiveApplication {
 		System.out.println("Item with id " + id + " deleted...");
 	}
 
-	public String getUserDetails(UserMongoDB user) {
+	public String getUserDetails(User user) {
 		System.out.println(
 				"User: " + user.getFirstName() + " " + user.getMiddleInitial() + " " + user.getLastName() +
 						", \nBirthday: " + user.getBirthDate() +
