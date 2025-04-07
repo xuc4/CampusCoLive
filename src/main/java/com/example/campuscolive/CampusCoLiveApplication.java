@@ -18,7 +18,7 @@ import java.util.List;
 
 @SpringBootApplication
 @EnableMongoRepositories
-public class CampusCoLiveApplication implements CommandLineRunner {
+public class CampusCoLiveApplication {
 
 	@Autowired
 	UserRepository userRepo;
@@ -28,7 +28,6 @@ public class CampusCoLiveApplication implements CommandLineRunner {
 		SpringApplication.run(CampusCoLiveApplication.class, args);
 	}
 
-	@Override
 	public void run(String... args) throws Exception {
 		/**
 	 	createUser();
@@ -37,11 +36,10 @@ public class CampusCoLiveApplication implements CommandLineRunner {
 		findCountOfUsers();
 		updateRole("User Role");
 		getUserByRole("Seller");
-	 	**/
 		findCountOfUsers();
-
 		deleteUser("1");
 		findCountOfUsers();
+		**/
 	}
 
 	 void createUser() {
